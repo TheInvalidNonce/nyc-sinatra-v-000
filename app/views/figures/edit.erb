@@ -4,12 +4,12 @@
   <input type="text" name="figure[name]" id="figure_name" value="<%= @figure.name %>">
 
   <label for="new_landmark"></label>
-  <input type="text" name="landmark[name]" id="new_landmark" value="<%= @figure.landmarks.name%>">
+  <input type="text" name="landmark[name]" id="new_landmark">
 
   <label for="new_title"></label>
   <input type="text" name="title[name]">
 
-  <h3>Titles:</h3>
+
     <% Title.all.each do |title| %>
       <input type="checkbox" name="figure[title_ids][]">
         <%= title.name %>
@@ -17,5 +17,4 @@
     <% end %>
 
     <input type="submit" value="Edit Figure">
-
 </form>
